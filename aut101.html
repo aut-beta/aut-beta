@@ -1,0 +1,598 @@
+<html>
+    
+    <title>Autinerary</title>
+    
+    <head>
+        <!-- Random Stuff -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Icon -->
+        <link rel="icon" href = "Images/logos/logored.ico">
+        
+        <!-- Google font: IBM Plex Sans -->
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,300,400,500,600,700&display=swap" rel="stylesheet">
+            
+        <!-- Stylesheet -->
+        <link href="stylesheet.css" rel="stylesheet" type="text/css">
+        
+        <!-- New Icon Library -->        
+        <script src="https://kit.fontawesome.com/9c91cd6215.js" crossorigin="anonymous"></script>
+        
+        <!-- Overriding the OG style for each specific page's color theme -->
+        <style>
+            .dropdown-content {
+                background-color: rgba(255, 156, 156, 0.3);
+            }
+            
+            .dropdown-content a {
+                background-color: #ff9c9c;
+            }
+            
+            .graydiv {
+                background-color: #e38484;
+            }
+
+            .graydivdark {
+                background-color: #360000;
+            }
+            
+            .copydiv {
+                background-color: #ff7373; 
+            }
+            
+            body.dark-mode {
+                background-color: #450000; /*#1c1c1c*/
+                color: #f0f0f0;
+            }
+            
+            .hometomapbtn {
+                background-color: white; 
+                color: #e38484;
+                border: 2px solid #e38484;
+            }
+
+            .hometomapbtn:hover {
+                background-color: #e38484; /*00 at the end makes it transparent*/
+                color: white;
+                border: 2px solid #e38484;
+            }
+
+            .hometomapbtndark {
+                background-color: white; 
+                color: #360000;
+                border: 2px solid #360000;
+            }
+
+            .hometomapbtndark:hover {
+                background-color: #360000; /*00 at the end makes it transparent*/
+                color: white;
+                border: 2px solid #360000;
+            }
+            
+            .modal-header {
+                background-color: #e38484; 
+            }
+        </style>
+        
+    </head>
+    
+    <body id="body" class="light-mode" onload="loadingScreen()">
+        
+        <!-- Loader -->
+        <div class="gooey">
+            <!-- Dot 1 -->
+            <span class="dot"></span>
+            
+            <!-- Dots 2-4 -->
+            <div class="dots"><span></span><span></span><span></span></div>
+        </div>
+        
+        
+        <!-- Loader vs Div -->
+        <div id="myDiv" class="animate-bottom">
+            
+            <!-- Topnav bar -->
+            <div class="topnav">
+                <!-- Logo -->
+                <a href=#home style="width: 15%;"><img id="logoimg" src="Images/logos/logowhite.png"></a>
+
+                <!--Dropdown menu -->
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><img id="dropimg" src="Images/drop2.png"></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <!-- Dark/Light Toggle Button -->
+                            <!--<a id="dltoggle" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode"><img name="sun" src="Images/sun2.png" width="50" height="50"></a>-->
+                            <a href="index.html" class="dropbtn">HOME</a>
+                            <a id="modalbtn1" class="dropbtncurrent" style="cursor: pointer;">AUTISM 101</a>
+                            <a id="modalbtn2" class="dropbtn">DIAGNOSIS 101</a>
+                            <a id="modalbtn3" class="dropbtn">SERVICES 101</a>
+                            <a id="modalbtn4" class="dropbtn">YOUTUBE SHORTS</a>
+                            <a id="modalbtn5" class="dropbtn">OUR BLOG</a>
+                            <a href="news.html" class="dropbtn">AUTISM IN THE WORLD</a>
+                            <a href="about.html" class="dropbtn">ABOUT US</a>
+                            <a href="#contact" class="dropbtn">CONTACT US</a><br>           
+                        </div>
+                </div>
+            </div>
+
+            <!-- Scroll to top button -->
+            <button onclick="topFunction()" id="topbtn"><img src="Images/up.png" class="topimg"></button>
+            
+            
+            <!-- Dark/Light Toggle -->
+            <button onclick="toggleDarkLight()"  name="dark_light" id="dltoggle" title="Toggle dark/light mode"><img src="Images/sun.png" class="dlimg"></button>
+            
+
+            
+            <!-- Title Screen -->
+            <!--<section id="home">-->
+            <div style="background-image: url(Images/aut101background.png); background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover;"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                <!-- Semi-Title -->
+                <p class="homesemititle">Do you want</p>
+
+                <!-- Title -->
+                <p class="hometitle">MORE INFO ON AUTISM?</p>
+
+                 <!-- Title Description -->
+                <p class="hometitledescrip">If so, we'll try to help you with that.</p>
+                
+                <!-- Reminder to click the button below -->
+                <p class="aboutpar" style="color: white; margin-bottom: 10; font-weight: normal;">(Hey. Just remember, the button below will take you back to the roadmap.)</p>
+
+                <!-- Roadmap Button -->        
+                <button onclick=" window.open('roadmap.html','_blank')" class="hometomapbtn">Enter the Roadmap</button>
+
+                <!-- Down Button -->
+                <center><a href="#about"><img src="Images/down.png" class="downbtn"></a></center>
+            </div>
+            <!--</section>-->
+            
+
+            <!-- About Us (kinda) -->
+            <!--<section id="about">-->
+            <div id="about"><br><br><br><br>
+                <!-- Title -->
+                <h2>By the way...</h2>
+                <h1>Did you miss the intro?</h1>
+
+                <!-- Welcome to Autinerary -->
+                <p class="aboutpar">Click the button below to catch-up first before diving deep into an Autism 101!</p><br><br>
+
+                <!-- Autism Intro Redirect -->        
+                <button onclick=" window.open('autintro.html','_blank')" class="hometomapbtndark">The Intro (if you need it)</button><br><br><br><br>
+            </div>
+           <!--</section>-->
+            
+            
+
+            <!-- Goal section -->
+            <div class="graydiv"><br><br><br><br>
+                <!-- Title -->
+                <h2>Let's start with...</h2>
+                <h1>The Evolution of Autism</h1> 
+
+                <!--Info -->
+                <p class="aboutpar">The definition of autism has evolved from Leo Kanner’s description of a distinct syndrome of early infantile autism in 1940s to the current Diagnostic and Statistical Manual of the American Psychiatric Association (DSM-5) broader definition of a communication and behavioural disorder.</p><br><br>
+                
+                <!-- Pic #1 -->
+                <img src="Images/aut101pic1.jpg" class="aboutimg">
+
+                <p class="aboutpar"> Prior to 2013, the five ASD diagnostic subcategories were autistic disorder, Asperger disorder, Rett disorder, childhood disintegrative disorder, and pervasive developmental disorder (PDD) not otherwise specified. Currently, the DSM-5 autism diagnostic sub-categories are based on two criteria - <span style="font-weight: 700;">persisting deficits of social communication and interaction</span> and <span style="font-weight: 700;">restricted and repetitive behaviors, interests, activities</span>. Encompassing all of this are the three levels of severity used to describe to diagnose ASD (shown in the diagram above): <span style="font-weight: 700;">level 1 - requiring support, level 2 - requiring substantial support, and level 3 - requiring very substantial support.</span></p><br><br>
+
+                <br><br><br><br>
+
+            </div>
+            
+            <div><br><br><br><br>
+                <!-- Title -->
+                <h2>You should know...</h2>
+                <h1>The Prevalence of Autism</h1>
+                
+                <!-- Pic #2 -->
+                <img src="Images/aut101pic2.png" class="aboutimg">
+                
+                <!-- Info -->
+                <p class="aboutpar">The prevalence rate of Autism in Canada is around 1 in 66 children and youth, aged 5 to 17 years, to be precise. Boys are four times more at risk of getting diagnosed with ASD than girls. No one can say for sure what causes autism; however, studies have shown that genetics, the age of parents and environmental factors increase the risk of autism in children.</p><br><br><br><br><br><br>
+            </div>
+            
+            <div class="graydiv"><br><br><br><br>
+                <!-- Title -->
+                <h2>It's Important to Know...</h2>
+                <h1>The Characteristics of Autism</h1>
+                
+                <!--Info -->
+                <p class="aboutpar">The symptoms and range of abilities of individuals with ASD differ. No two individuals with ASD appear or behave alike. However, the ASD characteristics can be groups into three categories, shown in the diagram below:</p><br><br>
+                
+                <!-- Pic #3 -->
+                <img src="Images/aut101pic3.jpg" class="aboutimg">
+
+                <p class="aboutpar">The first is <span style="font-weight: 700;">Social communication</span>: including difficulties understanding or responding to social cues and non-verbal communication such as facial expressions, challenges in developing, and understanding normal communication with others. The next is <span style="font-weight: 700;">Social interaction</span>: including difficulty relating to people and events such as challenges interacting with and making friends, making eye contact. Finally, <span style="font-weight: 700;">Restricted or repetitive patterns of behaviors, interests or activities</span>: including speaking in unique way such as echolalia and high pitches; toe-walking, hand-flapping, playing with toys in unusual way such as lining up cars; unusual or extreme sensory issues  such as fascination with light, movements, indifference to pain, sensitive to loud noises; insistence and need of predictable routine or structure</p>
+
+                <p class="aboutpar"> The different levels of support for individuals with ASD vary based on: the number, type, and severity of symptoms, levels of functioning, age of first signs of autism, age of diagnosis, and challenges associated with social situations</p><br><br>
+
+                <br><br><br><br>
+
+            </div>
+            
+            <div><br><br><br><br>
+                <!-- Title -->
+                <h2>Does anyone know...</h2>
+                <h1>What Causes Autism</h1>
+                
+                <!-- Info -->
+                <p class="aboutpar">Unfortunately, the answer to this is no; <span style="font-weight: 700;">the cause of Autism Spectrum Disorder (ASD) is currently unknown.</span> Scientific evidence suggests that probable factors contributing to ASD in an individual include genetics, environmental factors and age of parents. There is relatively high risk of occurrence of ASD in a family if a member has autism. Autism is not caused by bad parenting, nor by vaccines. Future research may shed more light on how genes and environmental factors interact with each other to cause autism.</p><br><br><br><br><br><br>
+            </div>
+            
+            <div class="graydiv"><br><br><br><br>
+                <!-- Title -->
+                <h2>Are there any...</h2>
+                <h1>Comorbidities (a.k.a Autism + other disorders)</h1>
+                
+                <!-- Info -->
+                <p class="aboutpar">Individuals with ASD often present other co-occurring sensory, physical, and mental health conditions such as epilepsy, depression, anxiety and attention deficit hyperactivity disorder (ADHD). Associated condition includes Fragile X Syndrome, Tuberous Sclerosis, Metabolic disorders, Fetal rubella syndrome, structural brain anomalies. Children with ASD are four times more likely to suffer gastrointestinal problems and twice likely to have a psychiatric diagnosis than the general population The intellectual functioning ability of individuals with ASDs varies from profound impairment to superior levels.</p><br><br><br><br><br><br>
+            </div>
+            
+            <div><br><br><br><br>
+                <!-- Title -->
+                <h2>What about...</h2>
+                <h1>Diagnosis &amp; Early Prevention</h1>
+                
+                <!-- Info -->
+                <p class="aboutpar">There is <span style="font-weight: 700;">no medical test for autism such as blood tests or brain scans</span>. Autism is <span style="font-weight: 700;">diagnosed based on observation of a child’s communication and behaviour in comparison to other children of the same age</span>. Autism diagnosis is done by trained health professionals such as a psychologist, developmental-behavioral pediatrician, child psychiatrist or other providers. Diagnosis typically involves an interview with the parents or caregivers, and play-based testing with the child (Copeland, 2018). Early diagnosis and treatment are important to reduce the symptoms of autism and improve the quality of life for people with autism. </p><br><br><br><br><br><br>
+            </div>
+            
+            <div class="graydiv"><br><br><br><br>
+                <!-- Title -->
+                <h2>What are Autism's...</h2>
+                <h1>Social and Economic Impacts</h1>
+                
+                <!-- Info -->
+                <p class="aboutpar">ASD can significantly limit some individual’s ability to carry out daily activities, access education and employment, negatively influencing their ability to participate in the society while others with autism are able to live fulfilling and independent lives. The lifelong care-giving of individuals on ASD can be demanding, extremely stressful and financially devastating for families and results in some parents having to quit or downgrading their jobs to provide the necessary supports for their children on ASD. The lifetime costs of care for a high needs ASD diagnosis can range up to $5.5 million. However, for most families, the cost is more than financial and include the emotional and mental well-being of parents, siblings and extended family. <span style="font-weight: 700;">The empowerment of caregivers is a critical component of care for children with the severe form of ASD to improve their quality of life.</span> It's also important to remember that <span style="font-weight: 700;">early intervention generally increases chances of avoiding autism's worst case scenarios mentioned above.</span></p>
+                
+                <p class="aboutpar">The average lifespan for individuals with ASD is half of the general population as they appear to be at an increased risk of death from injury and have higher rates of suicide attempts, and suicide deaths. Individuals with ASD appear more likely to have more unfavourably police encounters or interactions that escalate unnecessarily with studies showing that police are largely unaware they are interacting with someone with ASD. <span style="font-weight: 700;">As mentioned earlier, the earlier the diagnosis and intervention, the higher the chances of avoiding autism's worst case scenarios mentioned above.</span></p><br><br><br><br><br><br>
+            </div>
+            
+            <div><br><br><br><br>
+                <!-- Title -->
+                <h2>Is there any...</h2>
+                <h1>Canadian National Strategy for Autism</h1>
+                
+                <!-- Info -->
+                <p class="aboutpar">Rather disappointingly, there is <span style="font-weight: 700;">no national strategy</span>for autism spectrum disorders (ASD) in Canada as of March 2020, despite recommendations by the senate standing committee in 2007 for pan-Canadian coordination to establish a comprehensive National ASD Strategy in “Pay now or pay later: Autism families in crisis” report. According to the Canadian Autism Spectrum Disorder Alliance (CASDA, 2019), a national strategy will ensure that <span style="font-weight: 700;">Canadians with ASD and their families have full and equitable access to the resources they need across a lifespan where and when they need them</span>, and, of course, we strongly agree with them. We believe components of a national ASD strategy should include the following:</p><br><br>
+                
+                <div class="intcontainer" style="min-height: 400px;">
+                    <!-- Box 1 -->
+                    <div class="intbox" style="min-height: 400px;"> 
+                        <br><br><center><i class="fas fa-university fa-3x"></i></center><br>
+                        <p class="boxtitle">A Full-Governmental Approach</p><br>
+                        <p class="boxpar"> 
+                            An all government level approach to ASD to ensure consistency and coordination that will improve lives and provide the needs of individuals on the spectrum and their families.
+                        </p><br> 
+                    </div>
+
+                    <!-- Box 2 -->
+                    <div class="intbox" style="min-height: 400px;">
+                        <br><br><center><i class="fas fa-chess-knight fa-3x"></i></center><br>
+                        <p class="boxtitle">A Proper National Strategy</p><br>
+                        <p class="boxpar"> 
+                            All government levels approach to ASD to ensure consistency and coordination that will improve lives and provide the needs of individuals on the spectrum and their families.
+                        </p><br> 
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="intbox" style="min-height: 400px;">
+                        <br><br><center><i class="fas fa-users fa-3x"></i></center><br>
+                        <p class="boxtitle">A Federal-Led Plan</p><br>
+                        <p class="boxpar"> 
+                            Federal leadership that will enable the spread of best practices throughout Canada through a national knowledge exchange.
+                        </p><br>
+                    </div> 
+                </div><br><br><br><br>
+            </div>
+            
+            <!-- Modal 1: Autism 101 Info Split -->
+            <div id="modal1" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 style="margin-top: 20; margin-bottom: 20; font-weight: bold;">Which page are you looking for?</h2>
+                    <h2 style="margin-top: 20; margin-bottom: 20;">Let us help you find the info you need.</h2>
+                </div>
+                <div class="modal-body">
+                    <button onclick=" window.open('autintro.html','_self')" class="hometomapbtndark" style="float: left;">Intro to Autism</button>
+                    <button onclick=" window.open('aut101.html','_self')" class="hometomapbtndark" style="float: none;">Deep Dive into Autism</button>
+                    <button onclick=" window.open('autkids.html','_self')" class="hometomapbtndark" style="float: right;">Autism, Just for Kids</button>
+                </div>
+              </div>
+
+            </div>
+            
+            <!-- Modal 2: Diag 101 Info Split -->
+            <div id="modal2" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 style="margin-top: 20; margin-bottom: 20; font-weight: bold;">Which page are you looking for?</h2>
+                    <h2 style="margin-top: 20; margin-bottom: 20;">Let us help you find the info you need.</h2>
+                </div>
+                <div class="modal-body">
+                    <button onclick=" window.open('signs101.html','_self')" class="hometomapbtndark" style="float: left;">Signs &amp; Symptoms</button>
+                    <button onclick=" window.open('diag101.html','_self')" class="hometomapbtndark" style="float: none;">Assessment &amp; Diagnosis</button>
+                </div>
+              </div>
+
+            </div>
+            
+            <!-- Modal 3: Serv 101 Info Split -->
+            <div id="modal3" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 style="margin-top: 20; margin-bottom: 20; font-weight: bold;">Which page are you looking for?</h2>
+                    <h2 style="margin-top: 20; margin-bottom: 20;">Let us help you find the info you need.</h2>
+                </div>
+                <div class="modal-body">
+                    <button onclick=" window.open('serv101.html','_self')" class="hometomapbtndark" style="float: left;">General Info About Services</button>
+                    <button onclick=" window.open('servontario.html','_self')" class="hometomapbtndark" style="float: none;">Info About Ontario Services</button>
+                </div>
+              </div>
+
+            </div>
+            
+            <!-- Modal 4: YT Split -->
+            <div id="modal4" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 style="margin-top: 20; margin-bottom: 20; font-weight: bold;">Which page are you looking for?</h2>
+                    <h2 style="margin-top: 20; margin-bottom: 20;">Let us help you find the info you need.</h2>
+                </div>
+                <div class="modal-body">
+                    <button onclick=" window.open('youtube.html','_self')" class="hometomapbtndark" style="float: left;">For Parents</button>
+                    <button onclick=" window.open('youtubekids.html','_self')" class="hometomapbtndark" style="float: none;">For Kids</button>
+                </div>
+              </div>
+
+            </div>
+            
+            <!-- Modal 5: Blog Split -->
+            <div id="modal5" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 style="margin-top: 20; margin-bottom: 20; font-weight: bold;">Which page are you looking for?</h2>
+                    <h2 style="margin-top: 20; margin-bottom: 20;">Let us help you find the info you need.</h2>
+                </div>
+                <div class="modal-body">
+                    <button onclick=" window.open('blogs.html','_self')" class="hometomapbtndark" style="float: left;">Our Blogs</button>
+                    <button onclick=" window.open('blogsbyyou.html','_self')" class="hometomapbtndark" style="float: none;">Blogs by You</button>
+                </div>
+              </div>
+
+            </div>
+            
+            
+            
+            <div id="graydivlightcolor"></div>
+            <div id="graydivdarkcolor"></div>
+            
+            <!-- Copyright -->
+            <div id="contact" class="copydiv"><br><br>
+                <!-- Contact Buttons -->
+                <!--href="website link here" target="_blank"-->
+                <a class="tooltip"><img src="Images/insta.png" class="copybtn" hspace="5;"><span class="tooltiptext">IG Coming Soon!</span></a>
+                <a class="tooltip" ><img src="Images/facebook.png" class="copybtn" hspace="5;"><span class="tooltiptext">Facebook Coming Soon!</span></a>
+                <a class="tooltip"><img src="Images/twitter.png" class="copybtn" hspace="5;"><span class="tooltiptext">Twitter Coming Soon!</span></a>
+                <a class="tooltip"><img src="Images/youtube.png" class="copybtn" hspace="5;"><span class="tooltiptext">YT Coming Soon!</span></a>
+                <a class="tooltip"><img src="Images/linkedin2.png" class="copybtn" hspace="5;"><span class="tooltiptext">Linkedin Coming Soon!</span></a>
+                <a class="tooltip"><img src="Images/email.png" class="copybtn" hspace="5;"><span class="tooltiptext">info@autinerary.ca</span></a>
+                <a class="tooltip"><img src="Images/phone.png" class="copybtn" hspace="5;"><span class="tooltiptext">416-283-4345</span></a>
+
+                <!-- Copyright Statement -->
+                <center>
+                <br><p class="copytext">&copy; 2021 <span style="font-weight: 700; font-family: IBM Plex Sans;">AUTINERARY CO.</span>. All Rights Reserved. </p> <p>Made by Autinerary's Web Dev Team on <i class="fa fa-github"></i> using &nbsp;<img src="Images/brackets.png" width="22;"></p><br>
+                    
+                </center>
+
+            </div>
+            
+        </div>
+        
+
+        
+        <!-- Javascript -->
+        <script type="text/javascript">
+
+            
+            
+        /***** LOADING SCREEN *****/
+        var myVar;
+            
+        function stuff() {
+          myVar = setTimeout(showPage, 2000);
+        }
+        
+        function loadingScreen() {
+            stuff();
+        }
+
+        function showPage() {
+          document.getElementsByClassName("gooey")[0].style.display = "none";
+          document.getElementsByClassName("dot")[0].style.display = "none";
+          document.getElementById("myDiv").style.display = "block";
+        }
+        
+            
+        /***** MODAL STUFF *****/
+        // Get the modal
+        //var modals = [document.getElementById("modal1"), document.getElementById("modal2"), document.getElementById("modal3"), document.getElementById("modal4"), document.getElementById("modal5")];
+        var modal1 = document.getElementById("modal1");
+        var modal2 = document.getElementById("modal2");
+        var modal3 = document.getElementById("modal3");
+        var modal4 = document.getElementById("modal4");
+        var modal5 = document.getElementById("modal5");
+            
+        // Get the button that opens the modal
+        //var modalbtns = [document.getElementById("modalbtn1"), document.getElementById("modalbtn2"), document.getElementById("modalbtn3"), document.getElementById("modalbtn4"), document.getElementById("modalbtn5")];
+        var modalbtn1 = document.getElementById("modalbtn1");
+        var modalbtn2 = document.getElementById("modalbtn2");
+        var modalbtn3 = document.getElementById("modalbtn3");
+        var modalbtn4 = document.getElementById("modalbtn4");
+        var modalbtn5 = document.getElementById("modalbtn5");
+
+        // Get the <span> element that closes the modal
+        //var spans = [document.getElementsByClassName("close")[0], document.getElementsByClassName("close")[1], document.getElementsByClassName("close")[2], document.getElementsByClassName("close")[3], document.getElementsByClassName("close")[4]];
+        var span1 = document.getElementsByClassName("close")[0];
+        var span2 = document.getElementsByClassName("close")[1];
+        var span3 = document.getElementsByClassName("close")[2];
+        var span4 = document.getElementsByClassName("close")[3];
+        var span5 = document.getElementsByClassName("close")[4];
+
+        
+        /*var j=0;
+        for (j=0; j<modals.length; j++){
+            modalbtns[j].onclick = function() {
+              modals[j].style.display = "block";
+            }
+            
+            spans[j].onclick = function() {
+              modals[j].style.display = "none";
+            }
+            
+            window.onclick = function(event) {
+              if (event.target == modals[j]) {
+                modals[j].style.display = "none";
+              }
+            }
+        }*/
+            
+        // When the user clicks the button, open the modal 
+        /*btn.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }*/
+            
+        // When the user clicks the button, open the modal
+        modalbtn1.onclick = function() {modal1.style.display = "block";}
+        modalbtn2.onclick = function() {modal2.style.display = "block";}
+        modalbtn3.onclick = function() {modal3.style.display = "block";}
+        modalbtn4.onclick = function() {modal4.style.display = "block";}
+        modalbtn5.onclick = function() {modal5.style.display = "block";}
+
+        // When the user clicks on <span> (x), close the modal
+        span1.onclick = function() {modal1.style.display = "none";}
+        span2.onclick = function() {modal2.style.display = "none";}
+        span3.onclick = function() {modal3.style.display = "none";}
+        span4.onclick = function() {modal4.style.display = "none";}
+        span5.onclick = function() {modal5.style.display = "none";}
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {if (event.target == modal1) {modal1.style.display = "none";}}
+        window.onclick = function(event) {if (event.target == modal2) {modal2.style.display = "none";}}
+        window.onclick = function(event) {if (event.target == modal3) {modal3.style.display = "none";}}
+        window.onclick = function(event) {if (event.target == modal4) {modal4.style.display = "none";}}
+        window.onclick = function(event) {if (event.target == modal5) {modal5.style.display = "none";}}
+        
+        /***** CHANGE IMAGE *****/
+        var n = 0;
+
+        function changeImage() {
+          if ( n == 0 ) {
+            document.getElementsByClassName('dlimg')[0].src = "Images/sun.png";
+            n = 1;
+          }
+          else if ( n == 1 ) {
+            document.getElementsByClassName('dlimg')[0].src = "Images/moon.png";
+            n = 0;
+          }
+        }
+            
+            
+            
+        /***** DARK/LIGHT TOGGLE *****/
+        function toggleDarkLight() {
+            var body = document.getElementById("body");
+            var bCurrentClass = body.className;
+            body.className = bCurrentClass == "dark-mode" ? "light-mode" : "dark-mode";
+            changeImage();
+            
+            var graydiv = document.getElementsByClassName("graydiv");
+            var graydivdark = document.getElementsByClassName("graydivdark");
+            var i=0;
+            if (graydiv.length > 0) {
+                for (i=0; i<graydiv.length; i++) {
+                   graydiv.item(i).className = "graydivdark";
+                }
+            } else if (graydivdark.length > 0) {
+                for (i=0; i<graydivdark.length; i++) {
+                   graydivdark.item(i).className = "graydiv";
+                }
+            }
+        }
+           
+            
+            
+        /***** TRANSITIONING TOPNAV COLOR *****/
+        window.onscroll = function() {scrollFunction()};  
+           
+            
+            
+        /***** SCROLL-TO-TOP BUTTON *****/
+        function scrollFunction() {
+          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            document.getElementById("topbtn").style.display = "block";
+            document.getElementById("dltoggle").style.display = "block";
+            document.getElementsByClassName('topnav')[0].style.backgroundColor = "white";
+            document.getElementsByClassName('topnav')[0].style.boxShadow = "0px 8px 16px 0px rgba(0,0,0,0.2)";
+            document.getElementsByClassName('dropdown-content')[0].style.backgroundColor = "white";
+            document.getElementsByClassName('dropdown-content')[0].style.opacity = "1";
+            document.getElementById('logoimg').src = "Images/logos/logored.png";
+            document.getElementById('dropimg').src = "Images/drop.png";
+              
+          } else {
+            document.getElementById("topbtn").style.display = "none";
+            document.getElementById("dltoggle").style.display = "none";
+            document.getElementsByClassName('topnav')[0].style.backgroundColor = "transparent";
+            document.getElementsByClassName('topnav')[0].style.boxShadow = "none";
+            document.getElementsByClassName('dropdown-content')[0].style.backgroundColor = "#ff9c9c";
+            document.getElementsByClassName('dropdown-content')[0].style.opacity = "0.8";
+            document.getElementsByClassName('dropdown-content')[0].style.color = "white";
+            document.getElementById('logoimg').src = "Images/logos/logowhite.png";
+            document.getElementById('dropimg').src = "Images/drop2.png";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+        </script>
+        
+    </body>
+    
+</html>
