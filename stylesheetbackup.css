@@ -22,7 +22,7 @@
             body {
                 height: 100%;
                 margin: 0;
-                font-family: Rubik, Rubik, Rubik;
+                font-family: IBM Plex Sans, IBM Plex Sans, IBM Plex Sans;
                 font-weight: lighter;
             }
             
@@ -46,32 +46,17 @@
                 text-align: center; 
                 margin-top: 60px;
             }
-
-            .curved-div {
-                background: white;
-                color: #FFF;
-                text-align: center;
-            }
-
-            .curved-div .upper {
-                background: white;
-                color: #FFF;
-                text-align: center;
-            }
             
             .graydiv {
-                /* background-color: #99c1ff; */
-                background-image: linear-gradient(to right,#2998ff , #99c1ff);
+                background-color: #99c1ff;
             }
 
             .graydivdark {
                 background-color: #000b1f;
-                background-image: linear-gradient(to right, #001438, #000b1f);
             }
             
             .copydiv {
-                /* background-color: #6b97db;  */
-                background-image: linear-gradient(to right,#2998ff , #ff4bfd);
+                background-color: #6b97db; 
                 color: white; 
                 text-align: center; 
                 
@@ -79,8 +64,7 @@
             
             /* Light/Dark Mode */
             body.dark-mode {
-                /* background-color: #020f26; */
-                background-image: linear-gradient(to right, #041a41, #031535);
+                background-color: #020f26; /*#1c1c1c*/
                 color: #f0f0f0;
             }
             
@@ -113,59 +97,57 @@
 
 
         /***** LOADER ANIMATION *****/
-            .loader {
-                height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            .gooey{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 142px;
+                height: 40px;
+                margin: -20px 0 0 -71px;
+                background: white;
+                filter: contrast(20);
             }
-            .car__body {
-                animation: shake 0.2s ease-in-out infinite alternate;
+          
+            .gooey .dot{
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 12px;
+                left: 15px;
+                filter: blur(4px);
+                background: #000;
+                border-radius: 50%;
+                transform: translateX(0);
+                animation: dot 2.8s infinite;
             }
-            .car__line {
-                transform-origin: center right;
-                stroke-dasharray: 22;
-                animation: line 0.8s ease-in-out infinite;
-                animation-fill-mode: both;
+            
+            .gooey .dots{
+                transform: translateX(0);
+                margin-top: 12px;
+                margin-left: 31px;
+                animation: dots 2.8s infinite;
             }
-            .car__line--top {
-                animation-delay: 0s;
-            }
-            .car__line--middle {
-                animation-delay: 0.2s;
-            }
-            .car__line--bottom {
-                animation-delay: 0.4s;
-            }
-            @keyframes shake {
-                0% {
-                    transform: translateY(-1%);
-                }
-                100% {
-                    transform: translateY(3%);
-                }
-            }
-            @keyframes line {
-                0% {
-                    stroke-dashoffset: 22;
-                }
-                25% {
-                    stroke-dashoffset: 22;
-                }
-                50% {
-                    stroke-dashoffset: 0;
-                }
-                51% {
-                    stroke-dashoffset: 0;
-                }
-                80% {
-                    stroke-dashoffset: -22;
-                }
-                100% {
-                    stroke-dashoffset: -22;
-                }
-            }
- 
+            
+            .gooey .dots span{
+                display: block;
+                float: left;
+                width: 16px;
+                height: 16px;
+                margin-left: 16px;
+                filter: blur(4px);
+                background: #000;
+                border-radius: 50%;
+            } 
+
+            /* Animation */
+            @-moz-keyframes dot {50% {transform: translateX(96px);}}
+            @-webkit-keyframes dot {50% {transform: translateX(96px);}}
+            @-o-keyframes dot {50% {transform: translateX(96px);}}
+            @keyframes dot {50% {transform: translateX(96px);}}
+            @-moz-keyframes dots {50% {transform: translateX(-31px);}}
+            @-webkit-keyframes dots {50% {transform: translateX(-31px);}}
+            @-o-keyframes dots {50% {transform: translateX(-31px);}}
+            @keyframes dots {50% {transform: translateX(-31px);}}
 
             /* Animating the page */
             .animate-bottom {
@@ -198,6 +180,7 @@
         /***** SLIDESHOW *****/
             .show {display:block;}
             
+            * {box-sizing: border-box}
             .mySlides {display: none;}
             img {vertical-align: middle;}
 
@@ -221,11 +204,12 @@
             .prev, .next {
               cursor: pointer;
               position: absolute;
-              top: 60%;
+              top: 50%;
               width: auto;
               padding: 16px;
+              margin-top: -22px;
               color: #dddddd;
-              font-family: Rubik;
+              font-family: IBM Plex Sans;
               font-weight: bold;
               font-size: 18px;
               transition: 0.6s ease;
@@ -257,7 +241,7 @@
               bottom: 0px;
               width: 100%;
               text-align: center;
-              font-family: Rubik;
+              font-family: IBM Plex Sans;
               font-weight: 700;
               font-size: 30;
             }
@@ -290,13 +274,12 @@
             .mySlides .slidetooltiptext {
                 visibility: hidden;
                 min-width: 120px;
-                max-width: 50%;
                 background-color: #555;
                 color: #ddd;
                 font-size: 15;
                 text-align: center;
                 border-radius: 6px;
-                padding: 5px 5px;
+                padding: 5px 0;
                 position: absolute;
                 z-index: 3;
                 bottom: 102%;
@@ -304,7 +287,7 @@
                 margin-left: -60px;
                 opacity: 0;
                 transition: opacity 0.3s;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-weight: 300;
             }
 
@@ -431,8 +414,7 @@
                 left: 0;
                 /*background-color: black;*/
                 background-color: rgba(135, 208, 255, 0.3);
-                background-color: white;
-                opacity: 0.8;
+                /*opacity: 0.2;*/
                 width: 100%;
                 text-align: center;
                 z-index: 1;
@@ -512,7 +494,7 @@
                 cursor: pointer;
             }
 
-            .modal-header {padding: 2px 8px; background-image: linear-gradient(to right,#2998ff , #99c1ff); color: white;}
+            .modal-header {padding: 2px 8px; background-color: #99c1ff; color: white;}
 
             .modal-body {padding: 2px 8px; display: flex; flex-flow: row wrap; justify-content: space-around; align-items: center;}
 
@@ -555,7 +537,7 @@
             /* Logo */
             #logoimg {
                 width: 40px; 
-                /* height: 36px;  */
+                height: 36px; 
                 float: left; 
                 margin-left: 20%; 
                 padding: 10px 10px;
@@ -641,7 +623,7 @@
                 background-color: white; 
                 color: #99c1ff; 
                 padding: 10px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 17; 
                 font-weight: 400;
                 
@@ -659,7 +641,7 @@
                 background-color: #99c1ff; /*00 at the end makes it transparent*/
                 color: white; 
                 padding: 10px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 17;
                 font-weight: 400;
                 
@@ -677,7 +659,7 @@
                 background-color: white; 
                 color: #000b1f; 
                 padding: 10px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 17; 
                 font-weight: 400;
                 
@@ -695,7 +677,7 @@
                 background-color: #000b1f; /*00 at the end makes it transparent*/
                 color: white; 
                 padding: 10px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 17;
                 font-weight: 400;
                 
@@ -721,7 +703,7 @@
             
         /***** SECTION 2: ABOUT *****/
             .aboutimg {
-                width: 50%; 
+                width: 400; 
                 /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
                 /*float: left;
                 margin-left: 10%;
@@ -734,7 +716,7 @@
             }
             
             .aboutpar {
-                font-size: 22; 
+                font-size: 18; 
                 font-weight: 300; 
                 align-content: right;
                 text-align: justify; 
@@ -746,7 +728,7 @@
             }
             
             .aboutpar2 {
-                font-size: 22; 
+                font-size: 18; 
                 font-weight: 700; 
                 text-align: justify; 
                 text-align-last: center; 
@@ -842,10 +824,10 @@
             
             .text2 {
                 color: #272727;
-                font-size: 3.5vw;
+                font-size: 40px;
                 font-weight: 700;
                 position: absolute;
-                top: 15%;
+                top: 25%;
                 left: 50%;
                 -webkit-transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
@@ -855,7 +837,7 @@
             
             .text3 {
                 color: #4d4d4d;
-                font-size: 1.2vw;
+                font-size: 15px;
                 font-weight: 300;
                 line-height: 1.7;
                 position: absolute;
@@ -904,7 +886,7 @@
                 background-color: #252525; 
                 color: white; 
                 padding: 20px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 25; 
                 font-weight: 200;
                 border: none;
@@ -920,7 +902,7 @@
                 background-color: black; 
                 color: white; 
                 padding: 20px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 25;
                 font-weight: 200;
                 border: none;
@@ -994,7 +976,7 @@
                 background-color: #252525; 
                 color: white; 
                 padding: 20px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 25; 
                 font-weight: 200;
                 border: none;
@@ -1010,7 +992,7 @@
                 background-color: black; 
                 color: white; 
                 padding: 20px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 25;
                 font-weight: 200;
                 border: none;
@@ -1044,7 +1026,7 @@
                 box-sizing: border-box;
                 margin-top: 6px;
                 margin-bottom: 16px;
-                font-family: Rubik;
+                font-family: IBM Plex Sans;
                 font-size: 15;
                 resize: vertical;
             }
@@ -1054,7 +1036,7 @@
                 color: white;
                 font-size: 15;
                 font-weight: 500;
-                font-family: Rubik;
+                font-family: IBM Plex Sans;
                 padding: 12px 20px;
                 border: none;
                 border-radius: 4px;
@@ -1086,7 +1068,7 @@
             }
             
             .copytext {
-                font-family: Rubik;
+                font-family: IBM Plex Sans;
                 margin-top: 10;
                 line-height: 1.5;
                 text-align: center;
@@ -1115,7 +1097,7 @@
                 margin-left: -60px;
                 opacity: 0;
                 transition: opacity 0.3s;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-weight: 300;
             }
 
@@ -1186,7 +1168,7 @@
                 background-color: #252525; 
                 color: white; 
                 padding: 15px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 15; 
                 font-weight: 200;
                 border: none;
@@ -1202,7 +1184,7 @@
                 background-color: black; 
                 color: white; 
                 padding: 15px 20px;
-                font-family: Rubik; 
+                font-family: IBM Plex Sans; 
                 font-size: 15;
                 font-weight: 200;
                 border: none;
