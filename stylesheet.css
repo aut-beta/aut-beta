@@ -27,13 +27,13 @@
             }
             
             p {
-                margin:0;
-                padding:0;
+                margin: 0;
+                padding: 0;
                 line-height: 0;
             }
             
             h1 {
-                font-size: 45; 
+                font-size: 45px; 
                 font-weight: 500; 
                 text-align: center;
                 margin-top: 10px; 
@@ -41,7 +41,7 @@
             }
             
             h2 {
-                font-size: 20; 
+                font-size: 20px; 
                 font-weight: 300; 
                 text-align: center; 
                 margin-top: 60px;
@@ -259,7 +259,7 @@
               text-align: center;
               font-family: Rubik;
               font-weight: 700;
-              font-size: 30;
+              font-size: 30px;
             }
 
             /* Number text (1/3 etc) */
@@ -293,7 +293,7 @@
                 max-width: 50%;
                 background-color: #555;
                 color: #ddd;
-                font-size: 15;
+                font-size: 15px;
                 text-align: center;
                 border-radius: 6px;
                 padding: 5px 5px;
@@ -374,7 +374,7 @@
             .dropdown {
                 float: right;
                 width: 10%; 
-                margin-right: 40;
+                margin-right: 40px;
             }
 
             .dropdown:hover, .dropbtn:hover {
@@ -405,7 +405,7 @@
                 font-size: 20px;
                 font-weight: lighter;
                 margin: 0;
-                font-size: 13; 
+                font-size: 13px; 
                 margin-left: 1%;
                 cursor: pointer;
             }
@@ -421,7 +421,7 @@
                 font-size: 20px;
                 font-weight: normal;
                 margin: 0;
-                font-size: 13; 
+                font-size: 13px; 
                 margin-left: 1%;
             }
             
@@ -600,7 +600,7 @@
             
         /***** SECTION 1: HOME *****/
             .hometitle {
-                font-size: 80; 
+                font-size: 80px; 
                 color: white; 
                 font-weight: 700; 
                 text-align: center; 
@@ -610,7 +610,7 @@
 
             .homesemititle {
                 letter-spacing: 2px;
-                font-size: 40; 
+                font-size: 40px; 
                 color: white; 
                 font-weight: 400; 
                 text-align: center; 
@@ -620,7 +620,7 @@
 
             .hometitledescrip {
                 letter-spacing: 2px;
-                font-size: 30; 
+                font-size: 30px; 
                 color: white; 
                 font-weight: 400; 
                 text-align: center; 
@@ -629,7 +629,7 @@
             }
             
             #text {
-                font-size: 35; 
+                font-size: 35px; 
                 font-weight: 600; 
                 color: white;
                 text-align: center;
@@ -642,7 +642,7 @@
                 color: #99c1ff; 
                 padding: 10px 20px;
                 font-family: Rubik; 
-                font-size: 17; 
+                font-size: 17px; 
                 font-weight: 400;
                 
                 border: 2px solid #99c1ff;
@@ -660,7 +660,7 @@
                 color: white; 
                 padding: 10px 20px;
                 font-family: Rubik; 
-                font-size: 17;
+                font-size: 17px;
                 font-weight: 400;
                 
                 border: 2px solid #99c1ff;
@@ -678,7 +678,7 @@
                 color: #000b1f; 
                 padding: 10px 20px;
                 font-family: Rubik; 
-                font-size: 17; 
+                font-size: 17px; 
                 font-weight: 400;
                 
                 border: 2px solid #000b1f;
@@ -696,7 +696,7 @@
                 color: white; 
                 padding: 10px 20px;
                 font-family: Rubik; 
-                font-size: 17;
+                font-size: 17px;
                 font-weight: 400;
                 
                 border: 2px solid #000b1f;
@@ -710,10 +710,10 @@
             
             .downbtn {
                 float: center; 
-                width: 75; 
-                height: 75; 
-                margin-top: 100; 
-                margin-bottom: 100;
+                width: 75px; 
+                height: 75px; 
+                margin-top: 100px; 
+                margin-bottom: 100px;
             }
         /***** SECTION 1: HOME END *****/
             
@@ -734,26 +734,26 @@
             }
             
             .aboutpar {
-                font-size: 22; 
+                font-size: 22px; 
                 font-weight: 300; 
                 align-content: right;
                 text-align: justify; 
                 text-align-last: center; 
                 line-height: 40px;
-                margin-left: 50; 
-                margin-right: 50;
-                margin-top: 50; 
+                margin-left: 50px; 
+                margin-right: 50px;
+                margin-top: 50px; 
             }
             
             .aboutpar2 {
-                font-size: 22; 
+                font-size: 22px; 
                 font-weight: 700; 
                 text-align: justify; 
                 text-align-last: center; 
                 line-height: 40px; 
-                margin-left: 50; 
-                margin-right: 50; 
-                margin-top: 50; 
+                margin-left: 50px; 
+                margin-right: 50px; 
+                margin-top: 50px; 
             }
         /***** SECTION 2: ABOUT END*****/
             
@@ -772,33 +772,33 @@
                 width: 375px; 
                 height: 450px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
 
             .projbox:hover {
                 width: 375px; 
                 height: 450px;
                 box-shadow: 0px 16px 30px 10px rgba(0,0,0,0.2);
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
             
             .boximg {
-                width: 60; 
-                height: 60; 
-                margin-top: 20;
+                width: 60px; 
+                height: 60px; 
+                margin-top: 20px;
             }
             
             .boxtitle {
-                margin-top: 20; 
-                margin-bottom: 30; 
+                margin-top: 20px; 
+                margin-bottom: 30px; 
                 font-weight: 600; 
             }
             
             .boxpar {
                 line-height: 1.8; 
-                margin-left: 20; 
-                margin-right: 20; 
-                margin-bottom: 15; 
+                margin-left: 20px; 
+                margin-right: 20px; 
+                margin-bottom: 15px; 
                 font-weight: 300;
             }
             /* Container 2 End*/
@@ -812,6 +812,7 @@
             /* Container 2 - Overlay Container */
             .expcontainer {
                 position: relative;
+                margin: auto;
                 width: 85%;
             }
 
@@ -905,7 +906,7 @@
                 color: white; 
                 padding: 20px 20px;
                 font-family: Rubik; 
-                font-size: 25; 
+                font-size: 25px; 
                 font-weight: 200;
                 border: none;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -921,7 +922,7 @@
                 color: white; 
                 padding: 20px 20px;
                 font-family: Rubik; 
-                font-size: 25;
+                font-size: 25px;
                 font-weight: 200;
                 border: none;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -948,14 +949,14 @@
                 width: 375px; 
                 min-height: 750px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
 
             .intbox:hover {
                 width: 375px; 
                 min-height: 750px;
                 box-shadow: 0px 16px 30px 10px rgba(0,0,0,0.2);
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
         /***** SECTION 6: INTERESTS END *****/
             
@@ -995,7 +996,7 @@
                 color: white; 
                 padding: 20px 20px;
                 font-family: Rubik; 
-                font-size: 25; 
+                font-size: 25px; 
                 font-weight: 200;
                 border: none;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -1011,7 +1012,7 @@
                 color: white; 
                 padding: 20px 20px;
                 font-family: Rubik; 
-                font-size: 25;
+                font-size: 25px;
                 font-weight: 200;
                 border: none;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -1045,14 +1046,14 @@
                 margin-top: 6px;
                 margin-bottom: 16px;
                 font-family: Rubik;
-                font-size: 15;
+                font-size: 15px;
                 resize: vertical;
             }
 
             input[type=submit] {
                 background-color: #252525;
                 color: white;
-                font-size: 15;
+                font-size: 15px;
                 font-weight: 500;
                 font-family: Rubik;
                 padding: 12px 20px;
@@ -1075,22 +1076,24 @@
             
             /* Copyright button */
             .copybtn {
-                width: 40; 
-                height: 40;
+                width: 40px; 
+                height: 40px;
                 border-radius: 50%; 
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 
                 /* Center button */
                 margin: auto;
                 display: block;
+
+                margin-bottom: 10px;
             }
             
             .copytext {
                 font-family: Rubik;
-                margin-top: 10;
+                margin-top: 10px;
                 line-height: 1.5;
                 text-align: center;
-                margin-bottom: 25;
+                margin-bottom: 25px;
             }
             
             /* Tooltp (button hover text) */
@@ -1104,7 +1107,7 @@
                 min-width: 120px;
                 background-color: #555;
                 color: #fff;
-                font-size: 15;
+                font-size: 15px;
                 text-align: center;
                 border-radius: 6px;
                 padding: 5px 0;
@@ -1149,7 +1152,7 @@
                 font-size: 15px;
                 font-weight: 300;
                 cursor: pointer; 
-                margin-top: 20; 
+                margin-top: 20px; 
             }
 
             .blogcontainer {
@@ -1165,21 +1168,21 @@
                 width: 400px; 
                 height: 500px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
 
             .blogbox:hover {
                 width: 400px; 
                 height: 500px;
                 box-shadow: 0px 16px 30px 10px rgba(0,0,0,0.2);
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
 
             .blogtitle {
-                margin-top: 20; 
-                margin-bottom: 30; 
+                margin-top: 20px; 
+                margin-bottom: 30px; 
                 font-weight: 600;
-                font-size: 20;
+                font-size: 20px;
             }
 
             .blogbtn2 {
@@ -1187,7 +1190,7 @@
                 color: white; 
                 padding: 15px 20px;
                 font-family: Rubik; 
-                font-size: 15; 
+                font-size: 15px; 
                 font-weight: 200;
                 border: none;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -1203,7 +1206,7 @@
                 color: white; 
                 padding: 15px 20px;
                 font-family: Rubik; 
-                font-size: 15;
+                font-size: 15px;
                 font-weight: 200;
                 border: none;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
