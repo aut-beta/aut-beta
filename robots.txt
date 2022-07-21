@@ -1,0 +1,8 @@
+Sitemap: https://aut-beta.github.io/aut-beta/sitemap.xml
+
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
